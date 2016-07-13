@@ -9,6 +9,8 @@
   "scripts": {
     "coveralls": "npm run cover && coveralls <coverage/lcov.info",
     "test": "peasant test",
+    "ci": "peasant build",
+    "prepublish": "npm run ci",
     "cover": "peasant cover",
     "peasant": "peasant",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
