@@ -51,10 +51,7 @@ FORMAT: 1A
     {% set typeAttributes = item.attributes.get('typeAttributes') %}
     {% set description = item.meta.get('description') %}
     {% set storedElement = item.value['_storedElement'] %}
-    + {{ item.key.toValue() }}{% if item.value.toValue() %}: {{ item.value.toValue() }}{% endif %}{% if typeAttributes %} ({{ item.value['_storedElement'] }}, {{ typeAttributes.toValue() }}){% endif %}
-    {% if description %}
-    {{ description.toValue() }}
-    {% endif %}
+    + {{ item.key.toValue() }}{% if item.value.toValue() %}: {{ item.value.toValue() }}{% endif %}{% if typeAttributes %} ({{ item.value['_storedElement'] }}, {{ typeAttributes.toValue() }}){% endif %}{% if description %} - {{ description.toValue() }}{% endif %}
   {% endfor %}
 
 {% endmacro %}
