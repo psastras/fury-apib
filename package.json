@@ -1,0 +1,34 @@
+{
+  "name": "fury-apib",
+  "description": "Custom API Blueprint serializer for Fury.js",
+  "main": "./lib/adapter.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psastras/fury-apib.git"
+  },
+  "scripts": {
+    "coveralls": "npm run cover && coveralls <coverage/lcov.info",
+    "test": "peasant test",
+    "ci": "peasant -s lint test build",
+    "prepublish": "npm run ci",
+    "cover": "peasant cover",
+    "peasant": "peasant",
+    "lint": "peasant lint",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "dependencies": {
+    "babel-runtime": "^5.8.20",
+    "nunjucks": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "coveralls": "^2.11.2",
+    "fury": "^1.0.3",
+    "fury-adapter-swagger": "^0.8.0",
+    "glob": "^5.0.14",
+    "peasant": "^0.5.2",
+    "semantic-release": "^4.3.5"
+  },
+  "author": "Paul Sastrasinh",
+  "license": "MIT"
+}
